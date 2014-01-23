@@ -1,23 +1,110 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2519" systemVersion="12A206j" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="11G63" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1856"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
-        <!--class Prefix:identifier View Controller-->
+        <!--View Controller-->
         <scene sceneID="5">
             <objects>
                 <viewController id="2" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="0.00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bTz-jN-rty">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="132" id="F24-Ol-ISW"/>
+                                    <constraint firstAttribute="width" constant="190" id="Hfo-I1-jeF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="82"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jMz-uh-Ndq">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="144" id="DcL-s1-7nm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="StartButtonDown:" destination="2" eventType="touchUpInside" id="G2y-Ie-lRf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FjW-x5-hWb">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Stop">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="StopButtonDown:" destination="2" eventType="touchUpInside" id="Uxw-ER-YRq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qoj-Rx-MZd">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Clear">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="ClearButtonDown:" destination="2" eventType="touchUpInside" id="V65-a3-e30"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Qoj-Rx-MZd" firstAttribute="top" secondItem="FjW-x5-hWb" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="5UJ-Sg-hNg"/>
+                            <constraint firstItem="bTz-jN-rty" firstAttribute="top" secondItem="3" secondAttribute="top" constant="108" id="Dtq-TF-oOM"/>
+                            <constraint firstAttribute="bottom" secondItem="Qoj-Rx-MZd" secondAttribute="bottom" constant="70" id="GU9-7A-fYp"/>
+                            <constraint firstItem="FjW-x5-hWb" firstAttribute="trailing" secondItem="Qoj-Rx-MZd" secondAttribute="trailing" type="default" id="IcW-Fv-6k3"/>
+                            <constraint firstItem="jMz-uh-Ndq" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="JZ6-X4-kbF"/>
+                            <constraint firstItem="FjW-x5-hWb" firstAttribute="leading" secondItem="jMz-uh-Ndq" secondAttribute="leading" type="default" id="Spp-LV-ZMA"/>
+                            <constraint firstItem="FjW-x5-hWb" firstAttribute="trailing" secondItem="jMz-uh-Ndq" secondAttribute="trailing" type="default" id="YTQ-eC-J5O"/>
+                            <constraint firstAttribute="bottom" secondItem="jMz-uh-Ndq" secondAttribute="bottom" constant="177" id="dTz-vA-k1T"/>
+                            <constraint firstItem="bTz-jN-rty" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="81" id="fqj-ZB-F6z"/>
+                            <constraint firstItem="Qoj-Rx-MZd" firstAttribute="leading" secondItem="FjW-x5-hWb" secondAttribute="leading" type="default" id="hhd-yI-MgJ"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="ClearButton" destination="Qoj-Rx-MZd" id="x61-ps-3BZ"/>
+                        <outlet property="StartButton" destination="jMz-uh-Ndq" id="Lt7-lG-rAE"/>
+                        <outlet property="StopButton" destination="FjW-x5-hWb" id="cGk-AQ-sY7"/>
+                        <outlet property="TimeLabel" destination="bTz-jN-rty" id="kf8-gk-IVf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="ClearButtonDown:"/>
+                <relationship kind="action" name="StartButtonDown:"/>
+                <relationship kind="action" name="StopButtonDown:"/>
+                <relationship kind="outlet" name="ClearButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="StartButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="StopButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="TimeLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

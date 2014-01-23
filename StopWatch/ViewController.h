@@ -8,6 +8,22 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController {
+    
+    IBOutlet UILabel *TimeLabel;
+    IBOutlet UIButton *StartButton;
+    IBOutlet UIButton *StopButton;
+    IBOutlet UIButton *ClearButton;
+    
+    NSTimer *timeTicker;
+}
+
+@property(nonatomic, retain) UILabel *time;
+
+-(IBAction) StartButtonDown:(id) sender;
+-(IBAction) StopButtonDown:(id) sender;
+-(IBAction) ClearButtonDown:(id) sender;
+
+-(void)showActivity;
 
 @end
